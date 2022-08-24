@@ -121,7 +121,7 @@ var contMh=0;
 
 for(var i =0; i<listah.length;i++){
     if(listah[i]<21){
-        document.write(listah[i]+" ");
+        
         contMh+=1;
         
     }
@@ -130,13 +130,13 @@ for(var i =0; i<listah.length;i++){
 }
 
 
-document.write("porcentaje hombres menores a 21: "+" "+((contMh*100)/listah.length).toFixed(2));
+document.write("Porcentaje hombres menores a 21: "+" "+((contMh*100)/listah.length).toFixed(2));
 
 document.write("<br>");
 var contMM=0;
 for(var j =0; j<listam.length;j++){
     if(listam[j]<21){
-        document.write(listam[j]+" ");
+        
         contMM+=1;
         
     }
@@ -145,34 +145,28 @@ for(var j =0; j<listam.length;j++){
 }
 
 
-document.write("porcentaje mujeres menores a 21: "+" "+((contMM*100)/listam.length).toFixed(2));
+document.write("Porcentaje mujeres menores a 21: "+" "+((contMM*100)/listam.length).toFixed(2));
 
-//var PorcentajeH21=(contMh*100)/listah.length();
+var menorEdad=listam[0];
+document.write("<br>");
 
-
-
-
-
-
-
-
-
-/*while(edad!=-1){
-    if(edad>0 && edad< 110){
-        acumEdad=acumEdad+edad;
-        contEdad+=1;
-        var edad = parseInt(prompt("ingrese edad: "));
-        
+for(var i =0; i<listam.length;i++){
+    if(listam[i]<menorEdad){
+        menorEdad=listam[i];
     }
-    
-    else {
-        alert("la edad ingresada es esta por fuera del limite ingrese de nuevo o ingrese -1 para terminar");
-        var edad = parseInt(prompt("ingrese edad nuevamente: "));
-    }
-    
-    
 }
-var promedio= acumEdad/contEdad;
-//alert(promedio.toFixed(1));
-document.write("El promedio de edad general es: "+" "+promedio.toFixed(1));
-*/ 
+
+document.write("Menor edad de las mujeres: "+menorEdad);
+
+
+var mayorEdad=listah[0];
+
+
+
+for(var i =0; i<listah.length;i++){
+    if(mayorEdad<listah[i]){
+        mayorEdad=listah[i];
+    }
+}
+document.write("<br>");
+document.write("Mayor edad de las hombres: "+mayorEdad);
