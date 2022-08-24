@@ -17,7 +17,7 @@ Entrega
 Clonar este repositorio localmente
 Crear un repositorio personal con el nombre dw-p1-04
 Modificar este README.md con este contenido:
-### Alumno: ...
+### Alumno: Julian Toledo
 
 #### Comision: ...
 Subir los archivos index.html, index.js y README.md
