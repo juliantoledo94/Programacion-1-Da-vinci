@@ -1,6 +1,5 @@
 
 
-
 class Disco{
     #nombre;
     #autor
@@ -51,8 +50,8 @@ class Disco{
 }
 
 class Pista{
-    #nombre
-    #duracion
+    #nombre;
+    #duracion;
 
     constructor(nombre,duracion){
         this.#nombre = nombre;
@@ -67,6 +66,8 @@ class Pista{
     set setDuracion(duracion){
         this.#duracion = duracion;
     }
+
+    
 }
 
 
@@ -96,12 +97,18 @@ function Cargar(){
     
     disco.setNombre=validarStrings(prompt("ingrese nombre del disco:"));
     disco.setAutor=prompt("ingrese autor")
-    disco.setCodigo=parseInt(prompt("ingrese codigo"));
-
+    disco.setCodigo=parseInt(prompt("ingrese codigo")); 
+    /*
     pista.setNombrePista=prompt("ingrese nombre de la pista: ");
-    pista.setDuracion=parseInt(prompt("ingrese duracion en minutos"));
-
+    pista.setDuracion=parseInt(prompt("ingrese duracion en segundos"));
     disco.agregarPista(pista);
+    */
+   CrearPistas();
+
+      
+    
+
+    
 
     lista_discos.push(disco);
 
@@ -112,6 +119,24 @@ function Cargar(){
 
 function Mostrar(){
     
+}
+
+function CrearPistas(){
+
+    confirmacion=prompt("crear nueva pista? s/n");
+
+    while(confirmacion!="n"){
+        
+        pista.setNombrePista=prompt("ingrese nombre de la pista: ");
+        pista.setDuracion=parseInt(prompt("ingrese duracion en segundos"));
+        disco.agregarPista(pista);
+        confirmacion=prompt("crear nueva pista? s/n");
+
+        if(confirmacion == "n"){
+            break;
+        }
+    }
+
 }
 
 
